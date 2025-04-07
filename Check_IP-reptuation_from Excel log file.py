@@ -5,6 +5,32 @@ import sys
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import PatternFill
 
+/*This is the requirements for the script to function properly:
+
+Python Environment: 
+
+Python 3.x installed on the system.
+Required Libraries:
+
+pandas: For data manipulation and reading/writing Excel files.
+requests: For making HTTP requests to the AbuseIPDB API.
+openpyxl: For reading from and writing to Excel files in .xlsx format.
+These can be installed via pip:
+
+pip install pandas requests openpyxl
+
+Valid API Key:
+
+A valid API key for the AbuseIPDB API to authenticate requests.
+Input File:
+
+An Excel file (.xlsx) containing a column named source_ip with IP addresses.
+               
+Network Access:
+
+Internet access to connect to the AbuseIPDB API for retrieving IP reputation data.
+These requirements ensure the script runs smoothly and successfully retrieves and processes IP reputation information.*/
+    
 # Function to check IP reputation via AbuseIPDB API
 def check_ip_reputation(ip, api_key):
     url = "https://api.abuseipdb.com/api/v2/check"
